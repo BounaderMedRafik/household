@@ -9,15 +9,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        MyDefault:
+          "bg-slate-50 text-slate-900 rounded-full hover:bg-slate-50/90",
         outlineDark:
-          " rounded-full font-bold border border-slate-700 bg-transparent hover:bg-slate-50 hover:text-slate-900",
+          " rounded-full font-bold border border-slate-700 bg-transparent hover:bg-slate-50/10 hover:text-slate-900",
 
         outlineWhite:
-          "rounded-full font-bold border border-slate-50 bg-transparent hover:bg-slate-50/20 ",
+          "rounded-full font-bold border border-slate-50/20 bg-transparent hover:bg-slate-50/20 ",
         default: "bg-slate-900 text-slate-50 hover:bg-slate-900/90 ",
         destructive: "bg-red-500 text-slate-50 hover:bg-red-500/90 ",
         outline:
-          "border border-slate-200 bg-white hover:bg-slate-100 hover:text-slate-900 ",
+          "border rounded-full border-slate-200 bg-white hover:bg-slate-100 hover:text-slate-900 ",
         secondary: "bg-slate-100 text-slate-900 hover:bg-slate-100/80 ",
         ghost: "hover:bg-slate-100 hover:text-slate-900  ",
         link: "text-slate-50 underline-offset-4 hover:underline ",
@@ -27,6 +29,7 @@ const buttonVariants = cva(
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
+        circle: "h-32 w-32",
       },
     },
     defaultVariants: {

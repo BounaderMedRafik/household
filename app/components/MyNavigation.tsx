@@ -12,7 +12,7 @@ const links = [
 
 const MyNavigation = () => {
   return (
-    <div className="w-full py-4 border-b border-b-slate-50 fixed bg-[#042826]   text-slate-50 flex justify-center items-center">
+    <div className="w-full py-4  border-b-[1px] border-b-slate-50/20 fixed z-50 bg-[#042826]/50 backdrop-blur-lg   text-slate-50 flex justify-center items-center">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center justify-center mr-4">
           <div className="text-3xl font-semibold">
