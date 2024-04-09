@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
+import MyLogo from "./MyLogo";
 
 const links = [
   { name: "About", href: "/about" },
@@ -16,7 +17,9 @@ const MyNavigation = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center justify-center mr-4">
           <div className="text-3xl font-semibold">
-            <Link href="/">HouseHold</Link>
+            <Link href="/">
+              <img className="w-12" src="/mylogo.svg" alt="anything" />
+            </Link>
           </div>
           <ul className="hidden md:flex ml-7 items-center justify-center">
             {links.map((index) => (

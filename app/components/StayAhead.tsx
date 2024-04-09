@@ -2,7 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Divide } from "lucide-react";
 import React, { useState } from "react";
-
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 const investments = [
   {
     pic: "/houses/house1.jpg",
@@ -67,15 +68,20 @@ const StayAhead = () => {
   return (
     <div>
       <div className="p-8">
-        <div className="text-xl flex items-center gap-2 md:text-3xl font-semibold justify-between">
+        <div className="text-xl flex flex-col md:flex-row md:items-center gap-2 md:text-3xl font-semibold md:justify-between">
           <div className="w-1/2">
             Stay Ahead with Valuable Investment Insights.
           </div>
-          <div className="flex items-center justify-center gap-2 ">
+          <div className="flex items-center md:justify-center gap-2 ">
             <Button
               size="sm"
               onClick={() => setCategory("investment")}
               variant="outlineDark"
+              className={cn(
+                category == "investment"
+                  ? "bg-green-100 hover:bg-green-50"
+                  : null
+              )}
             >
               <div className="flex items-center gap-2">Investment</div>
             </Button>
@@ -83,6 +89,11 @@ const StayAhead = () => {
               size="sm"
               onClick={() => setCategory("renovation")}
               variant="outlineDark"
+              className={cn(
+                category == "renovation"
+                  ? "bg-green-100 hover:bg-green-50"
+                  : null
+              )}
             >
               <div className="flex items-center gap-2">Renovation</div>
             </Button>
@@ -90,6 +101,9 @@ const StayAhead = () => {
               size="sm"
               onClick={() => setCategory("rental")}
               variant="outlineDark"
+              className={cn(
+                category == "rental" ? "bg-green-100 hover:bg-green-50" : null
+              )}
             >
               <div className="flex items-center gap-2">Rental</div>
             </Button>
@@ -97,11 +111,78 @@ const StayAhead = () => {
         </div>
         <div>
           {category == "investment" ? (
-            <div>investment</div>
+            <div>
+              <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+                {investments.map((index) => (
+                  <li
+                    className="p-2 transition-all cursor-pointer border hover:opacity-90 hover:-translate-y-1 border-black/20 rounded-md"
+                    key={index.title}
+                  >
+                    <div className="w-full relative rounded-md h-52 font-semibold overflow-hidden object-cover object-center">
+                      <img src={index.pic} />
+                      <div className="px-4 py-1 absolute top-2 left-2 text-xs bg-white rounded-full text-gray-950">
+                        Investment
+                      </div>
+                    </div>
+                    <div className="text-xl font-semibold mt-4">
+                      {index.title}
+                    </div>
+                    <div className="text-sm line-clamp-4 my-2">
+                      {index.desc}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ) : category == "renovation" ? (
-            <div>renovation</div>
+            <div>
+              {" "}
+              <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+                {renova.map((index) => (
+                  <li
+                    className="p-2 transition-all cursor-pointer border hover:opacity-90 hover:-translate-y-1 border-black/20 rounded-md"
+                    key={index.title}
+                  >
+                    <div className="w-full relative rounded-md h-52 font-semibold overflow-hidden object-cover object-center">
+                      <img src={index.pic} />
+                      <div className="px-4 py-1 absolute top-2 left-2 text-xs bg-white rounded-full text-gray-950">
+                        Renovation
+                      </div>
+                    </div>
+                    <div className="text-xl font-semibold mt-4">
+                      {index.title}
+                    </div>
+                    <div className="text-sm line-clamp-4 my-2">
+                      {index.desc}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ) : category == "rental" ? (
-            <div>rental</div>
+            <div>
+              <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+                {rents.map((index) => (
+                  <li
+                    className="p-2 transition-all cursor-pointer border hover:opacity-90 hover:-translate-y-1 border-black/20 rounded-md"
+                    key={index.title}
+                  >
+                    <div className="w-full relative rounded-md h-52 font-semibold overflow-hidden object-cover object-center">
+                      <img src={index.pic} />
+                      <div className="px-4 py-1 absolute top-2 left-2 text-xs bg-white rounded-full text-gray-950">
+                        Rental
+                      </div>
+                    </div>
+                    <div className="text-xl font-semibold mt-4">
+                      {index.title}
+                    </div>
+                    <div className="text-sm line-clamp-4 my-2">
+                      {index.desc}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ) : null}
         </div>
       </div>

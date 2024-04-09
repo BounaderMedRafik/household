@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
+import MyLogo from "./MyLogo";
 
 const WatchVideo = () => {
   return (
@@ -24,7 +25,9 @@ const WatchVideo = () => {
         <div className="   ring-8 rounded-full aspect-square p-24 ring-slate-50 h-full w-full ">
           <div className="rounded-full bg-[url('/ppl.svg')] bg-center bg-cover relative flex   justify-center items-center ring-4 h-full w-full ring-slate-50 ">
             <Button className="shadow-xl" size="circle" variant="outline">
-              HouseHold
+              <div className=" invert">
+                <MyLogo />
+              </div>
             </Button>
             <img
               src="/ppl/mohamed.jpg"

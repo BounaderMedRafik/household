@@ -59,7 +59,7 @@ const statistics = [
 
 const AlgeriaMaping = () => {
   return (
-    <div className="w-full border-b border-b-black/20 mb-96">
+    <div className="w-full border-b border-b-black/20 ">
       <div
         className="border-x 
      border-x-black/20 max-w-7xl  mx-auto  "
