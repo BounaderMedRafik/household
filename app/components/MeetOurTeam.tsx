@@ -3,7 +3,7 @@ import React from "react";
 
 const team = [
   {
-    name: "Malak smaili",
+    name: "Bounader Med Rafik",
     role: "Head of investment at BQ",
     pic: "/ppl/mohamed.jpg",
     quote:

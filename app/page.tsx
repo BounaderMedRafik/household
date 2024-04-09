@@ -4,6 +4,7 @@ import MyHeroSec from "./components/MyHeroSec";
 import StatisticsSection from "./components/StatisticsSection";
 import WatchVideo from "./components/WatchVideo";
 import MeetOurTeam from "./components/MeetOurTeam";
+import LimitedEdition from "./components/LimitedEdition";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <StatisticsSection />
       <WatchVideo />
       <MeetOurTeam />
+      <LimitedEdition />
     </div>
   );
 }
