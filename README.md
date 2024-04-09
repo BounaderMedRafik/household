@@ -8,7 +8,7 @@
 Welcome to the HouseHold Investments website repository! This website is designed to provide users with a platform to explore and learn about various investment opportunities. With a user-friendly interface and comprehensive information, HouseHold aims to empower individuals in making informed investment decisions.
 ## Documentation
 
- - [Live Demo](https://https://household.vercel.app/)
+ - [House Hold Website](https://household-two.vercel.app/)
  - [Github Repositry](https://github.com/BounaderMedRafik/household)
  - [issues](https://github.com/BounaderMedRafik/household/issues)
  - Design heavily inspired by [@Badi](https://dribbble.com/Badich)
