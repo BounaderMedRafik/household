@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import AlgeriaMap from "@/public/images/countryOfDz.svg";
 import { MyMovingCards } from "./MyMovingCards";
+import StayAhead from "./StayAhead";
 
 const testimonials = [
   {
@@ -58,49 +59,57 @@ const statistics = [
 
 const AlgeriaMaping = () => {
   return (
-    <div className="border-x border-x-black/20 max-w-7xl  mx-auto  ">
-      <div className="py-10 p-8">
-        <div className="flex  justify-between">
-          <div className="text-xl md:text-3xl font-semibold w-1/2">
-            We identify properties throughtout the nation that exhibit the
-            greatest investment potential
-          </div>
-          <div>
-            <Button variant="MyAtcButton">View all properties</Button>
-          </div>
-        </div>
-        <div className=" block md:flex  justify-between mt-5">
-          <div className=" w-full md:w-1/2">
-            <Image className=" w-full " src={AlgeriaMap} alt="Algeria Map" />
-          </div>
-          <div className="grid grid-cols-2 h-0 gap-5 ">
-            {statistics.map((index) => (
-              <div
-                className="hover:bg-slate-50 transition-all p-10 rounded-md  cursor-default"
-                key={index.numb}
-              >
-                <div className="text-5xl font-semibold">{index.numb}</div>
-                <div>{index.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="mt-96 md:mt-0">
-        <div className="p-8">
-          <div className="text-xl flex items-center gap-2 md:text-3xl font-semibold justify-between">
-            <div>Testimonials</div>
+    <div className="w-full border-b border-b-black/20 mb-96">
+      <div
+        className="border-x 
+     border-x-black/20 max-w-7xl  mx-auto  "
+      >
+        <div className="py-10 p-8">
+          <div className="flex  justify-between">
+            <div className="text-xl md:text-3xl font-semibold w-1/2">
+              We identify properties throughtout the nation that exhibit the
+              greatest investment potential
+            </div>
             <div>
-              <Button variant="outlineDark">
-                <div className="flex items-center gap-2">
-                  See all
-                  <ArrowUpRight size={15} />
+              <Button variant="MyAtcButton">View all properties</Button>
+            </div>
+          </div>
+          <div className=" block md:flex  justify-between mt-5">
+            <div className=" w-full md:w-1/2">
+              <Image className=" w-full " src={AlgeriaMap} alt="Algeria Map" />
+            </div>
+            <div className="grid grid-cols-2 h-0 gap-5 ">
+              {statistics.map((index) => (
+                <div
+                  className="hover:bg-slate-50 transition-all p-10 rounded-md  cursor-default"
+                  key={index.numb}
+                >
+                  <div className="text-5xl font-semibold">{index.numb}</div>
+                  <div>{index.label}</div>
                 </div>
-              </Button>
+              ))}
             </div>
           </div>
         </div>
-        <MyMovingCards speed="slow" items={testimonials} direction="right" />
+        <div className="mt-96 md:mt-0">
+          <div className="p-8">
+            <div className="text-xl flex items-center gap-2 md:text-3xl font-semibold justify-between">
+              <div>Testimonials</div>
+              <div>
+                <Button variant="outlineDark">
+                  <div className="flex items-center gap-2">
+                    See all
+                    <ArrowUpRight size={15} />
+                  </div>
+                </Button>
+              </div>
+            </div>
+          </div>
+          <MyMovingCards speed="slow" items={testimonials} direction="right" />
+        </div>
+        <div>
+          <StayAhead />
+        </div>
       </div>
     </div>
   );
