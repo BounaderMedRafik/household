@@ -9,6 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        MyAtcButton:
+          "text-slate-50 bg-[#042826] hover:opacity-90 transition rounded-full",
         MyDefault:
           "bg-slate-50 text-slate-900 rounded-full hover:bg-slate-50/90",
         outlineDark:

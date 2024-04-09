@@ -42,7 +42,7 @@ const LimitedEdition = () => {
           </Button>
         </div>
       </div>
-      <ul className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-5">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
         {stuffs.map((index) => (
           <li
             className="p-10 transition-all cursor-default rounded-md hover:-translate-y-1 hover:bg-slate-50/20"

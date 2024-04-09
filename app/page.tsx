@@ -5,6 +5,7 @@ import StatisticsSection from "./components/StatisticsSection";
 import WatchVideo from "./components/WatchVideo";
 import MeetOurTeam from "./components/MeetOurTeam";
 import LimitedEdition from "./components/LimitedEdition";
+import AlgeriaMaping from "./components/AlgeriaMaping";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <WatchVideo />
       <MeetOurTeam />
       <LimitedEdition />
+      <AlgeriaMaping />
     </div>
   );
 }
