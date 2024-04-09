@@ -56,7 +56,9 @@ const StayAhead = () => {
     <div>
       <div className="p-8">
         <div className="text-xl flex items-center gap-2 md:text-3xl font-semibold justify-between">
-          <div>Testimonials</div>
+          <div className="w-1/2">
+            Stay Ahead with Valuable Investment Insights.
+          </div>
           <div>
             <Button variant="outlineDark">
               <div className="flex items-center gap-2">
